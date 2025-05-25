@@ -22,7 +22,6 @@ const Tab = () => {
                 <span>Corrupti</span>
             </Link>
 
-
         </div>
     );
 };

@@ -22,7 +22,7 @@ async function Blogs() {
                     <div className="grid justify-center grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 ">
                         {
                             blogs.map((singleb) => <div key={singleb.id} className="className='transition border-2  relative  hover:scale-105 border-primary hover:border-secondary rounded p-3 bg-slate-100">
-                                <Link href={`/${singleb.id}`} className="max-w-sm mx-auto  group hover:no-underline focus:no-underline dark:bg-gray-50 ">
+                                <Link href={` components/Blogs/${singleb.id}`} className="max-w-sm mx-auto  group hover:no-underline focus:no-underline dark:bg-gray-50 ">
                                     <img role="presentation" className="object-cover w-full rounded h-44 dark:bg-gray-500 " src={singleb.cover_image} />
                                     <div className="p-6 space-y-2   ">
                                         <h3 className="text-2xl font-semibold group-hover:underline group-focus:underline">{singleb.title}</h3>

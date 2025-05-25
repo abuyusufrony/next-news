@@ -1,6 +1,6 @@
 import React from 'react';
 import Banner from './components/Banner/Banner';
-import Blogs from './components/Blogs/Blogs';
+import Blogs from './components/Blogs/page.jsx';
 
 
 const page = () => {
@@ -14,7 +14,6 @@ const page = () => {
 
       </div>
       <Blogs></Blogs>
-
 
 
     </div>

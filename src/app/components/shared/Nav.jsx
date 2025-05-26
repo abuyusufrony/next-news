@@ -35,7 +35,7 @@ const Nav = () => {
                     <NavigationMenuList>
 
                         <NavigationMenuItem className='flex items-center space-x-8'>
-                            <NavigationMenuLink href='/news' className={`${pathname === '/news' ? 'text-blue-500  font-semibold ' : ''}hover:text-red-500`} >
+                            <NavigationMenuLink href={'/components/Blogs'} className={`${pathname === '/components/Blogs' ? 'text-blue-500  font-semibold ' : ''}hover:text-red-500`} >
                                 News
                             </NavigationMenuLink>
 

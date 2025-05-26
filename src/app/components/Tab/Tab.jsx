@@ -1,8 +1,12 @@
 "use client"
+import SingleAr from '@/lib/SingleAr';
 import Link from 'next/link';
 import React, { useState } from 'react';
+import Bookmark from '../Bookmark/Bookmark';
 
-const Tab = () => {
+const Tab = ({ id }) => {
+
+
     const [tabindex, settabindex] = useState(false)
 
 
@@ -21,6 +25,7 @@ const Tab = () => {
                 </svg>
                 <span>Corrupti</span>
             </Link>
+            <Bookmark id={id}></Bookmark>
 
         </div>
     );

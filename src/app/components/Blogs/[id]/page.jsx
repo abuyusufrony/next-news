@@ -8,6 +8,9 @@ async function page({ params }) {
     const { id } = params
     const sa = await SingleAr(id)
 
+
+
+
     return (
 
         <div className="max-w-2xl px-6 py-16 mx-auto space-y-12">
@@ -21,7 +24,7 @@ async function page({ params }) {
                         </div>
                         <p className="flex-shrink-0 mt -3 text-sm md:mt-0">{sa.reading_time_minutes} min read • {sa.comments_count} Comments</p>
                     </div>
-                    <Tab></Tab>
+                    <Tab id={id}></Tab>
 
                     <div className='max-w mx-auto  group hover:no-underline focus:no-underline dark:bg-gray-50'>
                         <img role="presentation" className="object-cover w-full rounded h-44 dark:bg-gray-500 " src={sa.cover_image} />

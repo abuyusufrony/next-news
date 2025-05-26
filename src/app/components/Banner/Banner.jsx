@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
 const Banner = () => {
@@ -16,7 +17,7 @@ const Banner = () => {
 
                         However, we think its potential goes beyond convenience—it could empower people who lack computer skills by enabling them to complete tasks like filling out forms or navigating complex websites with ease.
                     </p>
-                    <button className='btn-primarry bg-black text-white p-2'>Read More </button>
+                    <Link href={'/components/Blogs'} className='btn-primarry bg-black rounded-lg text-center text-white p-2'>Read Blogs </Link>
                 </div>
             </div>
         </div>

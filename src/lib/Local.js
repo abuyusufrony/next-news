@@ -24,4 +24,11 @@ export const saveLocal = (blgpost) => {
     localStorage.setItem('blogs', JSON.stringify(blgPosts))
     toast.success('Added in Book marks')
 }
+export const DltLocal = (id) => {
+    let dltblg = store()
+    const remaing = dltblg.filter(d => d.id !== id)
+    localStorage.setItem('blogs', JSON.stringify(remaing))
+    toast.success('Remove From Bookmark')
+
+}
 

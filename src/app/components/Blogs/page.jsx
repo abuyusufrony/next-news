@@ -2,7 +2,7 @@ import Allblog from '@/lib/Allblog';
 import Link from 'next/link';
 import React from 'react';
 
-async function Blogs() {
+async function Blogs({ dlt }) {
     const blogs = await Allblog()
 
     return (
@@ -29,9 +29,14 @@ async function Blogs() {
                                         <span className="text-xs dark:text-gray-600">{new Date(singleb.published_at).toLocaleDateString()}</span>
                                         <p>{singleb.description}</p>
                                     </div>
-                                </Link>
 
-                            </div>)
+
+                                </Link>
+                                {dlt && <div> Button</div>}
+
+
+                            </div>
+                            )
                         }
                     </div>
                 </div>

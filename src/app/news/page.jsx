@@ -16,6 +16,7 @@ const page = () => {
                 </div>
                 <div className='w-1/5 bg-slate-200  h-96 '>
                     <h2>Side news section </h2>
+                    <h2>Fetch side section news</h2>
                 </div>
             </div>
         </div>

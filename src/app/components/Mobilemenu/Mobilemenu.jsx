@@ -17,50 +17,36 @@ const Mobilemenu = () => {
             {/* Toggle Button */}
             <button
                 onClick={toggleMenu}
-                className="btn bg-black text-white font-bold rounded-sm p-2"
+                className="p-2 rounded-md bg-black dark:bg-white text-white dark:text-black focus:outline-none"
                 aria-label="Toggle mobile menu"
             >
                 {menuOpen ? <RxCross2 size={24} /> : <MdMenu size={24} />}
             </button>
 
-            {/* Menu Panel */}
+            {/* Slide-down Menu */}
             {menuOpen && (
-                <div className="fixed top-16 left-4 right-4 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 px-6 py-6 shadow-xl rounded-xl flex flex-col space-y-6 transition-all duration-300">
-                    <Link
-                        href="/components/Blogs"
-                        onClick={toggleMenu}
-                        className="text-lg font-medium hover:text-blue-600 dark:hover:text-blue-400"
-                    >
-                        News
-                    </Link>
-
-                    <Link
-                        href="/service"
-                        onClick={toggleMenu}
-                        className="text-lg font-medium hover:text-blue-600 dark:hover:text-blue-400"
-                    >
-                        Services
-                    </Link>
-
-                    <Link
-                        href="/about"
-                        onClick={toggleMenu}
-                        className="text-lg font-medium hover:text-blue-600 dark:hover:text-blue-400"
-                    >
-                        About
-                    </Link>
-
-                    <Link
-                        href="/contract"
-                        onClick={toggleMenu}
-                        className="text-lg font-medium hover:text-blue-600 dark:hover:text-blue-400"
-                    >
-                        Contract
-                    </Link>
+                <div className="fixed top-16 left-4 right-4 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 shadow-2xl rounded-xl px-6 py-6 space-y-6 animate-slideDown">
+                    <nav className="flex flex-col space-y-4">
+                        {[
+                            { href: "/components/Blogs", label: "📰 News" },
+                            { href: "/service", label: "🛠 Services" },
+                            { href: "/about", label: "👤 About" },
+                            { href: "/contract", label: "✉️ Contact" },
+                        ].map(({ href, label }) => (
+                            <Link
+                                key={href}
+                                href={href}
+                                onClick={toggleMenu}
+                                className="text-lg font-semibold hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                            >
+                                {label}
+                            </Link>
+                        ))}
+                    </nav>
 
                     {/* Dark Mode Toggle */}
                     <div className="flex items-center justify-between pt-4 border-t border-gray-300 dark:border-gray-700">
-                        <span className="text-sm font-medium">Dark Mode</span>
+                        <span className="text-sm font-medium">🌙 Dark Mode</span>
                         <input
                             type="checkbox"
                             checked={isDarkMode}

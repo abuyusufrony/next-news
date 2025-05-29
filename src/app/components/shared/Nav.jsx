@@ -64,8 +64,8 @@ const Nav = () => {
                                     </li>
                                 </ul>
                             </NavigationMenuContent>
-                            <NavigationMenuLink className='hover:text-red-500 dark:hover:text-red-400 dark:text-gray-300' href='/about'>
-                                About
+                            <NavigationMenuLink className='hover:text-red-500 dark:hover:text-red-400 dark:text-gray-300' href='/components/Bookmarkcard'>
+                                Bookmark
                             </NavigationMenuLink>
                             <NavigationMenuLink className='hover:text-red-500 dark:hover:text-red-400 dark:text-gray-300' href='/contract'>
                                 Contract
